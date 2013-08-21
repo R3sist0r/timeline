@@ -1,0 +1,69 @@
+#timeline
+
+= @json
+
+:javascript
+  var data = {
+      "timeline":
+      {
+          "headline":"The Main Timeline Headline Goes here",
+          "type":"default",
+          "text":"<p>Intro body text goes here, some HTML is ok</p>",
+          "asset": {
+              "media":"http://yourdomain_or_socialmedialink_goes_here.jpg",
+              "credit":"Credit Name Goes Here",
+              "caption":"Caption text goes here"
+          },
+          "date": [
+              {
+                  "startDate":"2011,12,10",
+                  "endDate":"2011,12,11",
+                  "headline":"Headline Goes Here",
+                  "text":"<p>Body text goes here, some HTML is OK</p>",
+                  "tag":"Date 1",
+                  "classname":"optionaluniqueclassnamecanbeaddedhere",
+                  "asset": {
+                      "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                      "thumbnail":"optional-32x32px.jpg",
+                      "credit":"Credit Name Goes Here",
+                      "caption":"Caption text goes here"
+                  }
+              },
+              {
+                  "startDate":"2011,12,13",
+                  "endDate":"2011,12,15",
+                  "headline":"Date 2",
+                  "text":"<p>Body text goes here, some HTML is OK</p>",
+                  "tag":"Date 2",
+                  "classname":"optionaluniqueclassnamecanbeaddedhere",
+                  "asset": {
+                      "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                      "thumbnail":"optional-32x32px.jpg",
+                      "credit":"Credit Name Goes Here",
+                      "caption":"Caption text goes here"
+                  }
+              }
+          ],
+          "era": [
+              {
+                  "startDate":"2011,12,7",
+                  "endDate":"2011,12,13",
+                  "headline":"Creation",
+                  "text":"<p>Body text goes here, some HTML is OK</p>",
+                  "tag":"Everything was made"
+              }
+
+          ]
+      }
+  }
+  var timeline_config = {
+      type:       'timeline',
+                  width:      '100%',
+                  height:     '100%',
+                  source:     data,
+                  embed_id:   'timeline'
+  }
+
+  $(document).ready(function() {
+                createStoryJS(timeline_config);
+            });
